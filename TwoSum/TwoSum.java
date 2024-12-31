@@ -19,7 +19,6 @@ public class TwoSum {
         for (int i = 0; i < 10; i++) {
             allFunctions(methods);
             System.out.println();
-
         }
     }
 
@@ -30,19 +29,17 @@ public class TwoSum {
         Long start, stop;
 
         for (BiFunction<int[], Integer, int[]> method : methods) {
-            // Start the timer
+
             start = System.nanoTime();
-            answer = method.apply(nums, target); // Call the function
+            answer = method.apply(nums, target);
             stop = System.nanoTime();
 
-            // Print the elapsed time
             System.out.println("Time for " + method.getClass().getSimpleName() + ": " + (stop - start));
 
-            // Print the result
             for (int i = 0; i < answer.length; i++) {
                 System.out.print(answer[i] + " ");
             }
-            System.out.println(); // Newline for separation
+            System.out.println();
         }
 
     }
