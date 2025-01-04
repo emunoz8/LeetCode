@@ -31,8 +31,8 @@ class ListNode {
 public class MergeTwoSortedLists {
 
     public static void main(String[] args) {
-        ListNode a = createList(1, 5);
-        ListNode b = createList(1, 5);
+        ListNode a = createList(1, 3);
+        ListNode b = createList(6, 10);
 
         ListNode c = mergeTwoLists(a, b);
 
@@ -53,56 +53,46 @@ public class MergeTwoSortedLists {
             pointer.next = a;
             pointer = a;
         }
+        if (start == 1) {
+            ListNode a = new ListNode(100);
+            pointer.next = a;
+            pointer = a;
+
+            ListNode b = new ListNode(110);
+            pointer.next = b;
+            pointer = b;
+
+        }
 
         return head;
 
     }
 
     public static ListNode mergeTwoLists(ListNode a, ListNode b) {
-        ListNode start = new ListNode();
+        ListNode start;
         ListNode pointer = new ListNode();
-        boolean aIsLonger = true;
-        start.next = pointer;
+        start = pointer;
 
-        while (a.next != null && b.next != null) {
+        while (a != null && b != null) {
             if (a.val < b.val) {
-                pointer = a;
+                pointer.next = a;
                 a = a.next;
+                pointer = pointer.next;
 
             } else {
-                pointer = b;
+                pointer.next = b;
                 b = b.next;
+                pointer = pointer.next;
 
             }
 
         }
-        if (a.next == null)
-            aIsLonger = false;
-
-        if (aIsLonger)
-            transferNodes(a, b, start);
+        if (a != null)
+            pointer.next = a;
         else
-            transferNodes(b, a, start);
+            pointer.next = b;
 
-        return start;
-    }
-
-    public static void transferNodes(ListNode left, ListNode right, ListNode c) {
-        while (left.next != null) {
-            if (left.val > right.val) {
-                c.next = left;
-                left = left.next;
-            } else {
-                c.next = right;
-                break;
-            }
-
-        }
-        while (left != null) {
-            c.next = left;
-            left = left.next;
-        }
-
+        return start.next;
     }
 
 }
