@@ -2,7 +2,7 @@ package RemoveDuplicatesFromSortedArray;
 
 public class RemoveDuplicatesFromSortedArray {
     public static void main(String[] args) {
-        int[] nums = new int[] { 1, 2, 2 };
+        int[] nums = new int[] { 1, 1, 1, 2, 2 };
         int k = RemoveDuplicates(nums);
 
         for (int i = 0; i < k; i++) {
@@ -18,9 +18,7 @@ public class RemoveDuplicatesFromSortedArray {
         boolean isDone = false;
 
         for (int i = 1; i < n && !isDone; i++) {
-            isDone = true;
             while (i + k < n && cNum == nums[i + k]) {
-                isDone = false;
                 if (i + ++k >= n)
                     isDone = true;
             }
