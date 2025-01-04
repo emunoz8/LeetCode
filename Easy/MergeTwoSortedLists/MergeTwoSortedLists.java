@@ -70,27 +70,27 @@ public class MergeTwoSortedLists {
 
     public static ListNode mergeTwoLists(ListNode a, ListNode b) {
         ListNode start;
-        ListNode pointer = new ListNode();
-        start = pointer;
+        ListNode p = new ListNode();
+        start = p;
 
         while (a != null && b != null) {
             if (a.val < b.val) {
-                pointer.next = a;
+                p.next = a;
                 a = a.next;
-                pointer = pointer.next;
+                p = p.next;
 
             } else {
-                pointer.next = b;
+                p.next = b;
                 b = b.next;
-                pointer = pointer.next;
+                p = p.next;
 
             }
 
         }
         if (a != null)
-            pointer.next = a;
+            p.next = a;
         else
-            pointer.next = b;
+            p.next = b;
 
         return start.next;
     }
