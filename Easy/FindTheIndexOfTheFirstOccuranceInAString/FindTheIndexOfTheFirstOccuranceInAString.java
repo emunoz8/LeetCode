@@ -20,8 +20,10 @@ public class FindTheIndexOfTheFirstOccuranceInAString {
             try {
                 j = 0;
                 if (b[j] == a[i] && b[last] == a[i + last]) {
-                    while (j <= last && b[j++] == a[i++])
-                        ;
+                    while (j <= last && b[j] == a[i]){
+                        i++;
+                        j++;
+                    }
 
                     if (j - 1 == last)
                         return i - j;
@@ -35,14 +37,6 @@ public class FindTheIndexOfTheFirstOccuranceInAString {
             i++;
 
         }
-
-        return -1;
-    }
-
-    public static int optimalStrStr(String haystack, String needle) {
-        for (int i = 0, j = needle.length(); j <= haystack.length(); i++)
-            if (haystack.substring(i, j).equals(needle))
-                return i;
 
         return -1;
     }
