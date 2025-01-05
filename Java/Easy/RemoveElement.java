@@ -1,4 +1,3 @@
-package RemoveElement;
 
 public class RemoveElement {
 

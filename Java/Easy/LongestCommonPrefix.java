@@ -1,4 +1,3 @@
-package LongestCommonPrefix;
 
 public class LongestCommonPrefix {
 

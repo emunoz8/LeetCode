@@ -1,4 +1,3 @@
-package RomanToInt;
 
 import java.util.HashMap;
 import java.util.Map;

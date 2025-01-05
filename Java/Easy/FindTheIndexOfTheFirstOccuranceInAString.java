@@ -1,5 +1,3 @@
-package FindTheIndexOfTheFirstOccuranceInAString;
-
 public class FindTheIndexOfTheFirstOccuranceInAString {
 
     public static void main(String[] args) {
@@ -20,7 +18,7 @@ public class FindTheIndexOfTheFirstOccuranceInAString {
             try {
                 j = 0;
                 if (b[j] == a[i] && b[last] == a[i + last]) {
-                    while (j <= last && b[j] == a[i]){
+                    while (j <= last && b[j] == a[i]) {
                         i++;
                         j++;
                     }
