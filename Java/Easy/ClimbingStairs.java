@@ -24,7 +24,7 @@ public class ClimbingStairs {
 
     }
 
-    // recursive (from my nogging), ineffecient*******************//
+    // recursive (from my noggin), ineffecient*******************//
     public static int recursiveClimbingStairs(int n) {
         int total = helper(n, 0);
         return total;
