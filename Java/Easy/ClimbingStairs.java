@@ -8,8 +8,8 @@ public class ClimbingStairs {
     }
 
     public static int climbingStairs(int n) {
-        if (n <= 2)
-            return n;
+        if (n == 1)
+            return 1;
 
         int[] table = new int[n + 1];
 
@@ -24,7 +24,7 @@ public class ClimbingStairs {
 
     }
 
-    // recursive, ineffecient*******************//
+    // recursive (from my nogging), ineffecient*******************//
     public static int recursiveClimbingStairs(int n) {
         int total = helper(n, 0);
         return total;
