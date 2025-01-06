@@ -2,14 +2,42 @@ public class ClimbingStairs {
 
     public static void main(String[] args) {
 
-        int ans = climbingStairs(2);
+        int ans = climbingStairs(44);
         System.out.println(ans);
 
     }
 
-    // Seems like a permutation problem
     public static int climbingStairs(int n) {
+        if (n <= 2)
+            return n;
 
-        return (int) Math.pow(n, 2);
+        int[] table = new int[n + 1];
+
+        table[1] = 1;
+        table[2] = 2;
+
+        for (int i = 3; i <= n; i++) {
+            table[i] = table[i - 1] + table[i - 2];
+        }
+
+        return table[n];
+
     }
+
+    // recursive, ineffecient*******************//
+    public static int recursiveClimbingStairs(int n) {
+        int total = helper(n, 0);
+        return total;
+    }
+
+    public static int helper(int target, int sum) {
+        if (sum == target)
+            return 1;
+        if (sum > target)
+            return 0;
+
+        return helper(target, sum + 1) + helper(target, sum + 2);
+
+    }
+    // ******************************************//
 }
