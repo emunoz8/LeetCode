@@ -26,7 +26,6 @@ public class SymmetricTree {
     }
 
     // optimal recursive
-
     public boolean isSymmetric(TreeNode root) {
         if (root == null) {
             return true;
@@ -45,7 +44,7 @@ public class SymmetricTree {
     }
 
     // not optimal solution
-    public static boolean isSymmetric(TreeNode root) {
+    public static boolean notOptimalIsSymmetric(TreeNode root) {
         if (root == null)
             return true;
 
