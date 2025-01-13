@@ -14,7 +14,6 @@ public class PascalsTriangle{
             num /=i;
             row.add(num);
         }
-
         return row; 
     }
 
@@ -25,8 +24,6 @@ public class PascalsTriangle{
             rVal.add(generateRow(i));
 
         return rVal;
-
-
     }
     //******************************************************
     
