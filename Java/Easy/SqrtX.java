@@ -5,17 +5,26 @@ public class SqrtX {
         System.out.println(ans);
     }
 
+    //LeetCode answer
     public static int mySqrt(int x) {
+        if (x == 0 || x == 1)
+            return x;
 
-        float num = 1.0f;
+        int left = 1;
+        int right = x;
+        int mid;
 
-        do {
-            num += .01f;
+        while (left <= right) {
+            mid = left + (right - left) / 2;
+            if ((long) mid * mid > (long) x)
+                right = mid - 1;
+            else if (mid * mid == x)
+                return mid;
+            else
+                left = mid + 1;
 
-        } while (num * num < x);
-
-        return (int) Math.round(num);
-
+        }
+        return Math.round(right);
     }
 
 }
