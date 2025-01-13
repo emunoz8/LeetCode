@@ -7,19 +7,15 @@ public class PascalsTriangle{
     public static List<Integer> generateRow(int n){
         List<Integer> row = new ArrayList<>();
         int num = 1;
-
         row.add(1);
-
 
         for(int i=1; i < n;i++){
             num *= (n-i);
             num /=i;
             row.add(num);
-
         }
 
-        return row;
-        
+        return row; 
     }
 
     public static List<List<Integer>> optimalGenrate(int numRows){
