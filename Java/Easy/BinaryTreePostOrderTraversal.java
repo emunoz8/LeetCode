@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
 
-public class BinarayTreePostOrderTraversal {
+public class BinaryTreePostOrderTraversal {
     //left, right, root
     public static List<Integer> postOrderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
