@@ -1,7 +1,7 @@
 public class ExcelSheetColumnTitle {
 
     public static void main(String[] args) {
-        System.out.println(convertToTitle(702));
+        System.out.println(convertToTitle(7000));
     }
 
     public static String convertToTitle(int columnNumber) {
