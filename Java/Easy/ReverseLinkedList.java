@@ -5,6 +5,7 @@ public class ReverseLinkedList {
 
     }
 
+    //standard answer
     public static ListNode reverseList(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;
