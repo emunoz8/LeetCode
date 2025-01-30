@@ -39,31 +39,34 @@ class MyStack {
 
     MyStack() {
         a = new LinkedList<>();
-        b = new LinkedList<>();
 
     }
 
     int pop() {
         //get top of stack and remove it from stack
 
-        return -1;
+        return a.remove();
     }
 
     int top() {
         //look at top of stack
 
-        return -1;
+        return a.peek();
     }
 
     void push(int x) {
         //put value x on top of stack
+        a.add(x);
+
+        for (int i = 1; i < a.size(); i++)
+            a.add(a.remove());
 
     }
 
     boolean empty() {
         //check if stack is empty, if empty return true
 
-        return false;
+        return a.isEmpty();
     }
 
 }
