@@ -5,7 +5,6 @@ public class AddDigits {
     }
 
     //LeetCode, optimal:
-
     public static int optimalAddDigits(int num) {
         if (num <= 9) {
             return num;
@@ -18,6 +17,7 @@ public class AddDigits {
 
     }
 
+    //slower
     public static int addDigits(int num) {
         int digit;
         int curr = num;
