@@ -21,15 +21,9 @@ public class PowerOfThree {
 
     }
 
+    //leetcode answer, the number 1162261467 represents the largest int of 3^n, where n =19(?)
     public static boolean isPowerOfThree(int n) {
-
-        if (n == 0)
-            return false;
-        if (n == 1)
-            return true;
-
-        return n % 3 == 0 && (n >> 2) % 2 == 0 && n % 2 != 0;//not working yet
-
+        return n > 0 && 1162261467 % n == 0;
     }
 
 }
