@@ -7,10 +7,11 @@ public class IntersectionOfTwoArrays {
 
     }
 
+    //very clunky, but it works.
     public static int[] intersection(int[] nums1, int[] nums2) {
         Map<Integer, Boolean> map = new HashMap<>();
         int[] rArr;
-        int j = 0;
+        int j = 0, count = 0;
 
         for (int i = 0; i < nums1.length; i++) {
             map.put(nums1[i], false);
@@ -23,15 +24,16 @@ public class IntersectionOfTwoArrays {
         }
 
         for (Map.Entry<Integer, Boolean> entry : map.entrySet()) {
-            if (!entry.getValue())
-                map.remove(entry);
+            if (entry.getValue())
+                count++;
 
         }
 
-        rArr = new int[map.size()];
+        rArr = new int[count];
 
         for (Map.Entry<Integer, Boolean> entry : map.entrySet()) {
-            rArr[j++] = entry.getKey();
+            if (entry.getValue())
+                rArr[j++] = entry.getKey();
         }
 
         return rArr;
