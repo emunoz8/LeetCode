@@ -11,6 +11,7 @@ public class BinaryWatch {
 
     //aaah
     ///aaaahhhh
+    //I'm still working on it... maybe
     public static List<String> readBinaryWatch(int turnedOn) {
         List<Integer> result = new ArrayList<>();
         List<String> list = new ArrayList<>();
